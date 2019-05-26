@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Fell Swoop</title>
+  <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto+Mono" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500|Source+Sans+Pro:300,400&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!--FontAwesome-->
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!--main.css-->
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+
+<body>
+  <%include ../partials/header%>
+
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <%for(var i = 0; i<Photos.length; i++){%>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="<%=Photos[i].img%>" data-color="lightblue" alt="<%=Photos[i].title%>" />
+      </div>
+      <%}%>
+    </div>
+  </div>
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+  <script>
+    var $item = $(".carousel-item");
+    var $wHeight = $(window).height();
+    $item.eq(0).addClass("active");
+    $item.height($wHeight);
+    $item.addClass("full-screen");
+
+    $(".carousel img").each(function () {
+      var $src = $(this).attr("src");
+      var $color = $(this).attr("data-color");
+      $(this)
+        .parent()
+        .css({
+          "background-image": "url(" + $src + ")",
+          "background-color": $color,
+          "background-repeat": "no-repeat",
+          "background-position": "center center",
+          "background-size": "cover",
+          "width": "100%",
+          "height": "100%",
+        });
+      $(this).remove();
+    });
+
+    $(window).on("resize", function () {
+      $wHeight = $(window).height();
+      $item.height($wHeight);
+    });
+
+
+
+
+    $(".carousel").carousel({
+      interval: 4000,
+      pause: "false"
+    });
+    $(window).resize();
+  </script>
+
+  <!-- Next and previous buttons -->
+  <!--<div id="container">
+	<div class="row">
+		<div class="align-self-center" id="descript">
+				<div>
+					<h3 class="text-center" id="Title">WELCOME TO THE WORLD OF ONE FELL SWOOP</h3>
+				
+				<hr class="light">
+				<p class="lead text-center">We are a boutique marketing and publicity agency, working primarily within the arts,
+					entertainment and events\industries. We can provide everything from a full marketing service through to filling the gaps in your own
+					requirements. We've worked with events, brands and bands offering marketing and content strategy; management and support to events,
+					artists, festivals, independent labels and promoters, and work with a wide range of organisations from small to large.
+					We bring a wealth of industry experience, contacts and knowledge to every project.</p>
+				</div>
+		</div>
+
+
+
+	</div>
+	
+
+</div>
+-->
+
+  <!--- Connect -->
+
+  <!-- 	<div class="row text-center">
+		<div id="twitter" class=" col-xs-12 col-md-6 align-items-center">
+				<a class="twitter-timeline" href="https://twitter.com/OneFellTweet" data-widget-id="552849210140553216">Tweets
+					by @OneFellTweet</a>
+				<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+		</div>
+		<div class="col-xs-12 col-md-6 info">
+			<div>
+					<hr>
+				<h3>Sign up to our monthly newsletter</h3>
+				<button>
+					<a id="swoop" href="https://us4.campaign-archive.com/home/?u=fdbbb938e6db84343a39cd4d4&id=88f9e35a02"><img
+							src="css/img/one_fell_swoop_header_profile.jpg"></a>
+				</button>
+				<hr class="light">
+				<h3 class="contact">Contact</h3>
+				<a href="mailto:info@onefellswoop.co.uk">info@onefellswoop.co.uk</a>
+				<p></p>
+				<p><i class="fas fa-phone"></i> David McTague +44 (0) 7786 865111</p>
+				<p><i class="fas fa-phone"></i> Ally Goodman +44 (0) 7711 937259</p>
+
+				<a href="https://twitter.com/OneFellTweet/"><i class="fab fa-twitter-square social"></i></a>
+			</div>	
+		</div>
+	</div>
+-->
+  <%include ../partials/footer%>
+
+  <!--jQuery + Bootstrap + CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <!--main.js-->
+  <!-- <div class="clearfix colelem" id="pu189">
+
+		<div class="grpelem" id="u189">
+
+			<a class="twitter-timeline" href="https://twitter.com/OneFellTweet"
+				data-widget-id="552849210140553216">Tweets
+				by @OneFellTweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + "://platform.twitter.com/widgets.js";
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, "script", "twitter-wjs");
+			</script>
+		</div>
+		TWITEEEEEER!!!!!
+		-->
+</body>
+
+</html>

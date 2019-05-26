@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The team</title>
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500|Source+Sans+Pro:300,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!--FontAwesome-->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--main.css-->
+    <link rel="stylesheet" type="text/css" href="/css/admin.css">
+</head>
+
+<body>
+
+    <nav id="mainNav" class=" navbar navbar-light navbar-expand-lg text-uppercase ">
+        <div class="container">
+            <span class="navbar-brand">
+                <img src="/img/fell.jpg" alt="logo">
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav nav-fill w-100 align-items-start">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/employees/new" class="nav-link">Add new Employee</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link main" href="#">Admin Panel</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/testimonials/new">Add new Testimonial</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/photos/new">Add new Photo</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <h1>Testimonials</h1>
+    <hr style="border: 2px solid black;
+    width: 28rem;">
+    <div class="row text-center">
+        <%for(var i = 0; i<Testimonials.length; i++){%>
+        <div class=" col-lg-4 col-md-6 mb-4">
+            <div class="card testimonials">
+                <img src="<%=Testimonials[i].image%>" class="card-img-top" alt="<%=Testimonials[i].clientName%>">
+                <div class="card-body">
+                    <h5 class="card-title"><%=Testimonials[i].clientName%></h5>
+                    <p class="card-text"><%=Testimonials[i].testimonial%></p>
+                    <h5 class="card-title">What we do</h5>
+                    <p class="card-text"><%=Testimonials[i].whatWeDo%></p>
+                    <h5 class="card-title">Importance: <%=Testimonials[i].importance%></h5>
+                    <a href="/admin/testimonials/<%=Testimonials[i].id%>/edit" class="btn btn-info">Edit</a>
+                    <form class="delete-btn" action="/admin/testimonials/<%=Testimonials[i]._id%>?_method=DELETE"
+                        method="POST">
+                        <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+
+    <h1>Team</h1>
+    <hr style="border: 2px solid black;
+    width: 28rem;">
+    <div class="row text-center">
+        <%for(var i = 0; i<Employees.length; i++){%>
+        <div class=" col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-text"><%=Employees[i].name%></h5>
+                    <p class="card-text"><%=Employees[i].job%></p>
+                    <%if(Employees[i].description != ""){%>
+                    <p class="card-text"><%=Employees[i].desciption%></p>
+                    <%}%>
+                    <a href="/admin/Employees/<%=Employees[i].id%>/edit" class="btn btn-info">Edit</a>
+                    <form class="delete-btn" action="/admin/Employees/<%=Employees[i]._id%>?_method=DELETE"
+                        method="POST">
+                        <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+
+    <h1>Photos</h1>
+    <hr style="border: 2px solid black;
+    width: 28rem;">
+    <div class="row text-center">
+            <%for(var i = 0; i<Photos.length; i++){%>
+        <div class=" col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="<%=Photos[i].img%>" class="card-img-top" alt="<%=Photos[i].title%>">
+                <div class="card-body">
+                    <a href="/admin/photos/<%=Photos[i].id%>/edit" class="btn btn-info">Edit</a>
+                    <form class="delete-btn" action="/admin/photos/<%=Photos[i]._id%>?_method=DELETE" method="POST">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+    
+        
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

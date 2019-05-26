@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  background-color: #f3f3f3;
+  color: #333333;
+
+}
+
+
+
+.carousel-inner {
+  /* make sure your .items will get correct height */
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+
+  height: 100%;
+  width: 100%;
+}
+
+
+
+nav {
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #eeeeee;
+  font-family: 'Source sans pro';
+}
+
+.nav-link:hover {
+  color: rgb(223, 191, 159) !important;
+}
+
+#mainNav .main {
+  color: rgb(198, 140, 83);
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+
+#carousel h3 {
+  color: #c68c53;
+}
+
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+
+.fa-twitter-square {
+  font-size: 5rem;
+  margin: 1rem;
+}
+
+button {
+  outline: none;
+}
+
+button img {
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  padding-top: 3em;
+  background-color: #f3f3f3;
+  color: #333333;
+}
+
+.footer .contact {
+  padding-top: 1em;
+}
+
+.footer .follow {
+  padding-top: 1em;
+}
+
+.footer .follow .fa-twitter {
+  color: Dodgerblue;
+  font-size: 2em;
+}
+
+.footer .follow a {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+.footer .fa-ul {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.footer .fa-ul a {
+  padding-left: 1em;
+  color: #333333;
+}
+
+.footer .license {
+  background-color: #f3f3f3;
+}

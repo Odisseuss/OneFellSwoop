@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What we do</title>
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500|Source+Sans+Pro:300,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!--FontAwesome-->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--main.css-->
+    <link rel="stylesheet" type="text/css" href="/css/what-we-do.css">
+</head>
+
+<body>
+
+
+    <%include ../partials/header%>
+    <div class="container">
+    <div class="col-md-12 justify-content-center">
+    <h1 >What we <br/>do</h1>
+    <hr style="width: 25%;  border: 1px solid black;">
+</div>
+    
+        <div class="col-md-12">
+        <p >One Fell Swoop offer a host of marketing, communications and events services.</p>
+        <p >We pride ourselves on our adaptability, and are tenacious and passionate about what we do; 
+            providing everything from a full outsourced marketing solution through to working alongside in-house marketing teams to provide support and assistance</p>
+        <p >We provide full marketing campaigns and strategy, digital management, brand building, and creative support, and data analysis and reporting.</p>    
+        <p >We have a creative and bespoke approach, and bring a wealth of industry experience, contacts and knowledge to every project.</p>
+    </div>
+    </div>
+    <hr style="width: 90%; border: 1px solid black;">
+    <div class="container ">
+        
+    <div class=" text-xl-left text-center justify-content-center">
+        <h2 class="pb-3 ml-xl-5 ">What we can<br/>help you with</h2>
+    </div>
+    <!-- First column -->
+    
+        <div class="row">
+        <div class="col-xl-4 col-lg-6 col-sm-12 d-flex flex-column align-items-center justify-content-center text-center">
+        <p class="left" >Marketing, Strategy and Planning</p>
+        <hr style="width: 40%;border: 1px solid black;">
+
+        <p class="right"  >Publicity</p>
+        <hr style="width: 40%;border: 1px solid black;">
+
+        <p class="left" >Media Relations - Local / Regional/ National / Online PR</p>
+        <hr style="width: 40%;border: 1px solid black;">
+
+        <p class="right"  >Digital Marketing</p>
+        <hr style="width: 40%; border: 1px solid black;">
+
+        <p class="left" >Social Media Management</p>
+        <hr style="width: 40%; border: 1px solid black;">
+        </div>
+        <!-- Second column -->
+
+        <div class="col-xl-4 col-lg-6 col-sm-12 d-flex flex-column align-items-center justify-content-center text-center">
+        <p class="left" >Social Media Content Strategies</p>
+        <hr style="width: 40%; border: 1px solid black;">
+
+        <p class="right">Copywriting</p>
+        <hr style="width: 40%; border: 1px solid black;">
+
+        <p  class="left" >Events</p>
+        <hr style="width: 40%; border: 1px solid black;">
+
+        <p class="right" >Media Buying</p>
+        <hr style="width: 40%; border: 1px solid black;">
+
+        <p class="left" >Mailing List Management</p>
+        <hr style="width: 40%; border: 1px solid black;">
+    </div>
+            <!-- Third column -->
+        <div class="col-xl-4 col-lg-6 col-sm-12 d-flex flex-column align-items-center justify-content-center text-center">
+        <p class="left" >Partnerships</p>
+        <hr style="width: 40%; border: 1px solid black;">
+        
+        <p class="right" >Creative Support</p>
+        <hr style="width: 40%; border: 1px solid black;">
+        
+        <p class="left">Data Analysis / Reporting</p>
+        <hr style="width: 40%;border: 1px solid black;">
+    </div>
+    </div>
+    </div>
+    <script>
+    var left = document.querySelectorAll(".left")
+    var right = document.querySelectorAll(".right")
+    var final = new Array;
+    var k = 0;
+    var j = 0;
+    for(let i = 0;i < 13;i++){
+        if(i >= 5 && i < 10){
+            if(i%2==1){
+                final[i] = left[k];
+                k++;
+            }else{
+                final[i] = right[j];
+                j++;
+            }
+        }else{  
+            if(i%2==0){
+                final[i] = left[k];
+                k++;
+            }else{
+                final[i] = right[j];
+                j++;
+            }
+        }
+    }
+    j= 0;
+    
+    
+    interval = setInterval(function(){
+        if(j== 12){
+            clearInterval(interval);
+        }
+        if(final[j].classList.contains("left")){
+            final[j].style.visibility = "visible";
+            final[j].classList.add("slide-left");
+        }else if(final[j].classList.contains("right")){
+            final[j].style.visibility = "visible";
+            final[j].classList.add("slide-right");
+        }
+        j++;
+    },25)
+    
+    
+    </script>
+
+<%include ../partials/footer%>
+        
+        
+    <!--jQuery + Bootstrap + CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!--main.js-->
+    <script type="text/javascript" src="js/the-team.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: #f3f3f3;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-weight: 500;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #eeeeee;
+  font-family: 'Baloo Chettan', cursive;
+}
+
+.nav-link:hover {
+  color: #dfbf9f !important;
+}
+
+#mainNav .main {
+  color: #c68c53;
+}
+
+#carousel h3 {
+  color: #c68c53;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 1em !important;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+#content {
+  display: block;
+  padding: 50px 10px;
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+  height: 100%;
+  float: left;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#title h1 {
+  font-size: 3em;
+  font-weight: 200;
+}
+
+#title hr {
+  width: 45%;
+}
+
+.card-img-top {
+  padding: 60px;
+}
+
+.card-group {
+  margin-bottom: 30px;
+}
+
+.card {
+  margin: 15px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+/*---Media Queries --*/
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

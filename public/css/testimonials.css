@@ -1,0 +1,156 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  background-color: #f3f3f3;
+  color: #333333;
+
+}
+
+nav {
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #eeeeee;
+  font-family: 'Source sans pro';
+}
+
+
+
+
+#carousel h3 {
+  color: #c68c53;
+}
+
+.nav-link:hover {
+  color: rgb(223, 191, 159) !important;
+}
+
+#mainNav .main {
+  color: rgb(198, 140, 83);
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.fa-twitter-square {
+  font-size: 5rem;
+  margin: 1rem;
+}
+
+button {
+  outline: none;
+}
+
+button img {
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  border: 0.8px solid #c68c53;
+  background-color: #f3f3f3;
+  color: #c68c53;
+}
+
+.btn:hover {
+  border-color: #f3f3f3;
+  background-color: #c68c53;
+  color: #f3f3f3;
+}
+
+#content {
+  display: block;
+  padding: 50px 10px;
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+  height: 100%;
+  float: left;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#title h1 {
+  font-size: 3em;
+  font-weight: 200;
+}
+
+#title hr {
+  width: 45%;
+}
+
+.card-img-top {
+  padding: 60px;
+}
+
+.card-group {
+  margin-bottom: 30px;
+}
+
+.card {
+  margin: 15px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+/*---Media Queries --*/
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=testimonials.css.map */
+
+.footer {
+  padding-top: 3em;
+  background-color: #f3f3f3;
+  color: #333333;
+}
+
+.footer .contact {
+  padding-top: 1em;
+}
+
+.footer .follow {
+  padding-top: 1em;
+}
+
+.footer .follow .fa-twitter {
+  color: Dodgerblue;
+  font-size: 2em;
+}
+
+.footer .follow a {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+.footer .fa-ul {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.footer .fa-ul a {
+  padding-left: 1em;
+  color: #333333;
+}
+
+.footer .license {
+  background-color: #f3f3f3;
+}

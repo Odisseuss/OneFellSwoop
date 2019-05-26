@@ -1,0 +1,111 @@
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Source sans pro';
+  font-weight: 300;
+  background-color: #f3f3f3;
+  color: #333333;
+
+}
+
+.testimonials .card-img-top {
+  position: relative;
+  left: 40%;
+  height: 100px;
+  width: 100px;
+}
+
+.nav-link:hover {
+  color: rgb(223, 191, 159) !important;
+}
+
+#mainNav .main {
+  color: rgb(198, 140, 83);
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: "oswald";
+}
+.nav-link {
+  font-size: 1em !important;
+}
+nav {
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #eeeeee;
+  font-family: 'Source sans pro';
+}
+
+#loginform{
+  padding-top: 6%;
+}
+#loginform h1{
+  font-family: "oswald";
+}
+#loginform .form{
+  padding-top: 2%;
+}
+
+.row {
+  justify-content: center;
+}
+
+div.card {
+  justify-content: center;
+}
+
+.btn {
+  margin: 2px;
+}
+
+body h1 {
+  text-align: center;
+}
+.footer {
+  padding-top: 3em;
+  background-color: #f3f3f3;
+  color: #333333;
+}
+
+.footer .contact {
+  padding-top: 1em;
+}
+
+.footer .follow {
+  padding-top: 1em;
+}
+
+.footer .follow .fa-twitter {
+  color: Dodgerblue;
+  font-size: 2em;
+}
+
+.footer .follow a {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+.footer .fa-ul {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.footer .fa-ul a {
+  padding-left: 1em;
+  color: #333333;
+}
+
+.footer .license {
+  background-color: #f3f3f3;
+}
+
+
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,197 @@
+h1{
+    font-family: "oswald";
+    font-size: 6vmin;
+}
+
+h2{
+    font-family: "oswald";
+    font-size: 5vmin;
+}
+html,
+body {
+  height: 110%;
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  background-color: rgb(243, 243, 243);
+  color: #333333;
+
+}
+
+p{
+    font-size: 2vmin;
+    
+}
+
+hr{
+  margin-left: 0;
+  margin-right: 0;
+}
+.right, .left{
+  visibility: hidden;
+}
+nav {
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #eeeeee;
+  font-family: 'Source sans pro';
+}
+
+
+
+
+.nav-link:hover {
+  color: rgb(223, 191, 159) !important;
+}
+
+#mainNav .main {
+  color: rgb(198, 140, 83);
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 1em !important;
+}
+
+
+.slide-left {
+	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-right {
+	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.footer {
+  padding-top: 3em;
+  background-color: #f3f3f3;
+  color: #333333;
+}
+
+.footer .contact {
+  padding-top: 1em;
+}
+
+.footer .follow {
+  padding-top: 1em;
+}
+
+.footer .follow .fa-twitter {
+  color: Dodgerblue;
+  font-size: 2em;
+}
+
+.footer .follow a {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+.footer .fa-ul {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.footer .fa-ul a {
+  padding-left: 1em;
+  color: #333333;
+}
+
+.footer .license {
+  background-color: #f3f3f3;
+}
+
+
+
+/* ---------- */
+/* Animations */
+/* ---------- */
+
+
+@-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-500px);
+              transform: translateX(-500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-500px);
+              transform: translateX(-500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+ @-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(500px);
+              transform: translateX(500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(500px);
+              transform: translateX(500px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+ 
+
+
+  

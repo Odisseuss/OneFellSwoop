@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The team</title>
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500|Source+Sans+Pro:300,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!--FontAwesome-->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--main.css-->
+    <link rel="stylesheet" type="text/css" href="/css/the-team.css">
+</head>
+
+<body>
+
+
+    <%include ../partials/header%>
+    <div class="box">
+        <div class="wrapper">
+            <div class="container team">
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 col-md-3 member"
+                        onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">
+
+
+                        <h5><%=Employees[0].name%></h5>
+                        <p><%=Employees[0].job%></p>
+                        <a class="findOutMore" href="javascript:void(0)"
+                            onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">Read
+                            more</a>
+                    </div>
+                    <div id="popin" class="white_content">
+                        <div>
+                            <h2><%=Employees[0].name%></h2>
+                            <p><%=Employees[0].description%></p>
+
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none'"><i
+                                    class="far fa-arrow-alt-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div id="popout" class="black_overlay"></div>
+
+
+                    <div class="col-xs-12 col-md-3 member">
+
+                        <h5><%=Employees[1].name%></h5>
+                        <p><%=Employees[1].job%></p>
+                        <a class="findOutMore" href="javascript:void(0)"
+                            onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">Read
+                            more</a>
+                    </div>
+                    <div id="popin" class="white_content">
+                        <div>
+                            <h2><%=Employees[1].name%></h2>
+                            <p><%=Employees[1].description%></p>
+
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none'"><i
+                                    class="far fa-arrow-alt-circle-right"></i></a>
+                        </div>
+
+                    </div>
+                    <div id="popout" class="black_overlay"></div>
+                </div>
+                <%var i = 2%>
+                <%while(i < Employees.length){%>
+                <%if(i%3 == 2){%>
+                <div class="row justify-content-center">
+                    <%}%>
+                    <div class="col-xs-12 col-md-3 member">
+
+                        <h5><%=Employees[i].name%></h5>
+                    <p><%=Employees[i].job%></p>
+                    <a class="findOutMore" href="javascript:void(0)"
+                        onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">Read
+                        more</a>
+                </div>
+                <div id="popin" class="white_content">
+                    <div>
+                        <h2><%=Employees[i].name%></h2>
+                        <p><%=Employees[i].description%></p>
+
+                        <a href="javascript:void(0)"
+                            onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none'"><i
+                                class="far fa-arrow-alt-circle-right"></i></a>
+                    </div>
+
+                </div>
+                <div id="popout" class="black_overlay"></div>
+
+                <%i++%>
+                <%if(i%3 == 2){%>
+            </div>
+            <%}%>    
+                <%}%>
+
+        </div>
+    </div>
+    </div>
+
+    <%include ../partials/footer%>
+
+
+    <!--jQuery + Bootstrap + CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!--main.js-->
+    <script type="text/javascript" src="js/the-team.js"></script>
+
+</body>
+
+</html>
