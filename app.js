@@ -38,14 +38,6 @@ app.use(function (req, res, next) {
 });
 
 
-//Admin config
-//Sterge dupa primul run
-var Admin = new adminUser({username: "onefellswoop"});
-adminUser.register(Admin, "onefellswoop",function(err, done){
-    if(err){
-        console.log(err);
-    }
-});
 
 
 

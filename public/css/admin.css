@@ -32,6 +32,10 @@ body {
 
 h1{
   font-family: "oswald";
+  padding-top: 4%;
+}
+hr{
+  margin-bottom: 2%;
 }
 .nav-link {
   font-size: 1em !important;
@@ -45,13 +49,29 @@ nav {
 }
 
 #loginform{
-  padding-top: 6%;
+  padding-top: 2%;
 }
 #loginform h1{
   font-family: "oswald";
 }
 #loginform .form{
   padding-top: 2%;
+}
+
+#createform{
+  padding-top: 2%;
+}
+#createform h1{
+  font-family: "oswald";
+}
+#createform .form{
+  padding-top: 10%;
+}
+
+.container input, .container textarea{
+  min-width: 200px;
+  width: 350px;
+  height: 20%;
 }
 
 .row {

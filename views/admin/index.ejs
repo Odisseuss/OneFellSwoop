@@ -24,7 +24,7 @@
 <body>
 
     <nav id="mainNav" class=" navbar navbar-light navbar-expand-lg text-uppercase ">
-        <div class="container">
+        <div class="container ">
             <span class="navbar-brand">
                 <img src="/img/fell.jpg" alt="logo">
             </span>
@@ -94,7 +94,7 @@
                     <h5 class="card-text"><%=Employees[i].name%></h5>
                     <p class="card-text"><%=Employees[i].job%></p>
                     <%if(Employees[i].description != ""){%>
-                    <p class="card-text"><%=Employees[i].desciption%></p>
+                    <p class="card-text"><%=Employees[i].description%></p>
                     <%}%>
                     <a href="/admin/Employees/<%=Employees[i].id%>/edit" class="btn btn-info">Edit</a>
                     <form class="delete-btn" action="/admin/Employees/<%=Employees[i]._id%>?_method=DELETE"
