@@ -201,6 +201,10 @@ nav {
   padding-top: 3em;
   background-color: #f3f3f3;
   color: #333333;
+  position: fixed;
+  bottom: -52%;
+  
+  transform: skewY(5deg);
   
 }
 
