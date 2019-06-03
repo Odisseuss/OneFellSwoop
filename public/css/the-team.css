@@ -32,11 +32,9 @@ nav {
 .nav-link:hover {
   color: rgb(223, 191, 159) !important;
 }
-
-#mainNav .main {
-  color: rgb(198, 140, 83);
+.active{
+  color: rgb(198, 140, 83) !important;
 }
-
 .navbar {
   margin: 0;
   padding: 0;

@@ -21,6 +21,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--main.css-->
     <link rel="stylesheet" type="text/css" href="/css/testimonials.css">
+    
 </head>
 
 <body>
@@ -62,6 +63,13 @@
     </div>
 
     </div>
+
+      <script>
+    
+ $(function() {
+  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+  });
+  </script>
 
     <%include ../partials/footer%>
 

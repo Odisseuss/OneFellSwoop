@@ -21,6 +21,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <!--main.css-->
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  
+
 </head>
 
 <body>
@@ -40,6 +42,8 @@
   </div>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
   <script>
+
+   
     var $item = $(".carousel-item");
     var $wHeight = $(window).height();
     $item.eq(0).addClass("active");
@@ -68,14 +72,16 @@
       $item.height($wHeight);
     });
 
-
-
-
     $(".carousel").carousel({
       interval: 4000,
       pause: "false"
     });
     $(window).resize();
+
+    $(function() {
+  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+  });
+
   </script>
 
   <!-- Next and previous buttons -->
