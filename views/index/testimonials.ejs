@@ -47,7 +47,8 @@
                     alt="<%=Testimonials[i].clientName%>">
                     <div class="card-body">
                         <h5 class="card-title"><%=Testimonials[i].clientName%></h5>
-                        <p class="card-text"><%-Testimonials[i].testimonial.substring(0,100)%>...</p>
+                        
+                        <p class="card-text"><%=Testimonials[i].testimonial%></p>
                     </div>
                     <div class="card-footer">
                         <a class="btn btn-color" href="/testimonials/<%=Testimonials[i].id%>" role="button">Find out
@@ -62,16 +63,20 @@
         </div>
     </div>
 
-    </div>
+    
 
-      <script>
+      <%include ../partials/footer%>
+      
+      
+      
+        <script>
     
  $(function() {
   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
   });
   </script>
 
-    <%include ../partials/footer%>
+    
 
 
 

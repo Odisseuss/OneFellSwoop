@@ -19,11 +19,6 @@ nav {
 
 
 
-
-#carousel h3 {
-  color: #c68c53;
-}
-
 .nav-link:hover {
   color: rgb(223, 191, 159) !important;
 }
@@ -40,66 +35,10 @@ nav {
 
 
 
-.padding {
-  padding-bottom: 2rem;
-}
-
-.fa-twitter-square {
-  font-size: 5rem;
-  margin: 1rem;
-}
-
-button {
-  outline: none;
-}
-
-button img {
-  height: 100%;
-  width: 100%;
-}
-
-.btn {
-  border: 0.8px solid #c68c53;
-  background-color: #f3f3f3;
-  color: #c68c53;
-}
-
-.btn:hover {
-  border-color: #f3f3f3;
-  background-color: #c68c53;
-  color: #f3f3f3;
-}
-
-#content {
-  display: block;
-  padding: 50px 10px;
-  height: 100%;
-  width: 100%;
-}
-
-#title {
-  height: 100%;
-  float: left;
-  text-align: center;
-  padding-top: 30px;
-}
-
-#title h1 {
-  font-size: 3em;
-  font-weight: 200;
-}
-
-#title hr {
-  width: 45%;
-}
-
 .card-img-top {
   padding: 60px;
 }
 
-.card-group {
-  margin-bottom: 30px;
-}
 
 .card {
   margin: 15px;

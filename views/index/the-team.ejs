@@ -31,13 +31,13 @@
             <div class="container team">
                 <div class="row justify-content-center">
                     <div class="col-xs-12 col-md-3 member"
-                        onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">
+                        onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block';document.getElementById('popin').classList.add('animatepop');document.getElementById('popout').classList.add('animatepop')">
 
 
                         <h5><%=Employees[0].name%></h5>
                         <p><%=Employees[0].job%></p>
                         <a class="findOutMore" href="javascript:void(0)"
-                            onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">Read
+                            onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block';document.getElementById('popin').classList.add('animatepop');document.getElementById('popout').classList.add('animatepop')">Read
                             more</a>
                     </div>
                     <div id="popin" class="white_content">
@@ -46,7 +46,7 @@
                             <p><%=Employees[0].description%></p>
 
                             <a href="javascript:void(0)"
-                                onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none'"><i
+                                onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none';document.getElementById('popin').classList.remove('animatepop');document.getElementById('popout').classList.remove('animatepop')"><i
                                     class="far fa-arrow-alt-circle-right"></i></a>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         <h5><%=Employees[1].name%></h5>
                         <p><%=Employees[1].job%></p>
                         <a class="findOutMore" href="javascript:void(0)"
-                            onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">Read
+                            onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block';document.getElementById('popin').classList.add('animatepop');document.getElementById('popout').classList.add('animatepop')">Read
                             more</a>
                     </div>
                     <div id="popin" class="white_content">
@@ -67,7 +67,7 @@
                             <p><%=Employees[1].description%></p>
 
                             <a href="javascript:void(0)"
-                                onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none'"><i
+                                onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none';document.getElementById('popin').classList.remove('animatepop');document.getElementById('popout').classList.remove('animatepop')"><i
                                     class="far fa-arrow-alt-circle-right"></i></a>
                         </div>
 
@@ -84,7 +84,7 @@
                         <h5><%=Employees[i].name%></h5>
                     <p><%=Employees[i].job%></p>
                     <a class="findOutMore" href="javascript:void(0)"
-                        onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block'">Read
+                        onclick="document.getElementById('popin').style.display='block';document.getElementById('popout').style.display='block';document.getElementById('popin').classList.add('animatepop');document.getElementById('popout').classList.add('animatepop')">Read
                         more</a>
                 </div>
                 <div id="popin" class="white_content">
@@ -93,7 +93,7 @@
                         <p><%=Employees[i].description%></p>
 
                         <a href="javascript:void(0)"
-                            onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none'"><i
+                            onclick="document.getElementById('popin').style.display='none';document.getElementById('popout').style.display='none';document.getElementById('popin').classList.remove('animatepop');document.getElementById('popout').classList.remove('animatepop')"><i
                                 class="far fa-arrow-alt-circle-right"></i></a>
                     </div>
 

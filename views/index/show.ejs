@@ -12,34 +12,35 @@
     <title>Testimonial</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/css/testimonials.css">
+    <link rel="stylesheet" type="text/css" href="/css/showtestimonial.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <script src="/js/navScript.js" type="text/javascript"></script>
+        
 </head>
 
 <body>
 
     <%include ../partials/header%>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div class="card show" style="width: 18rem;">
-        <img src="<%=Testimonial.image%>, Importance: <%=Testimonial.importance%>" class="card-img-top"
-            alt="<%=Testimonial.clientName%>">
-        <div class="card-body">
-            <h5 class="card-title"><%=Testimonial.clientName%></h5>
-            <p class="card-text"><%=Testimonial.testimonial%></p>
-            <p class="card-text"><%=Testimonial.whatWeDo%></p>
-            <a href="/admin/<%=Testimonial._id%>/edit" class="btn btn-primary">Edit</a>
-            <form class="delete-btn" action="/admin/<%=Testimonial._id%>?_method=DELETE" method="POST">
-                <button class="btn btn-danger btn-sm">Delete</button>
-            </form>
+
+
+     <div class="container d-flex col-12 justify-content-center">
+         <div id="single-card" class="card">
+          <img class="card-img-top" src="<%=Testimonial.image%>"
+          alt="<%=Testimonial.clientName%>">
+         <div class="card-body">
+         <h5 class="card-title"><%=Testimonial.clientName%></h5>
+                        
+         <p class="card-text"><%=Testimonial.testimonial%></p>
+         <p class="card-text"><%=Testimonial.whatWeDo%></p>
+         </div>
+         <div class="card-footer">
+         </div>
         </div>
     </div>
-
     <script>
         $(function() {
   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
@@ -47,10 +48,10 @@
     </script>
 
 
-<%include ../partials/footer%>
+    <%include ../partials/footer%>
 
 
-    <script src="" async defer></script>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
