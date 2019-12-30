@@ -20,7 +20,7 @@
     "jquery": "^3.4.1",
     "materialize-css": "^1.0.0",
     "method-override": "^3.0.0",
-    "mongo-express": "^0.52.2",
+    "mongo-express": "^0.54.0",
     "mongodb": "^3.2.4",
     "mongodb-core": "^3.2.4",
     "mongoose": "^5.5.7",
